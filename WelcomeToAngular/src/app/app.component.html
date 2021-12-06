@@ -2,5 +2,6 @@
 <p>{{ intro }}</p>
 <div *ngFor="let item of todos">
   <input type="checkbox" [(ngModel)]="item.isDone">{{item.action}} ({{item.isDone ? "Yapıldı":"Yapılmadı"}})
+  <span class=""></span>
   <hr>
 </div>
