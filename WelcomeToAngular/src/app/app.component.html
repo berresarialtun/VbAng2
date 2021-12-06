@@ -1,7 +1,20 @@
-<h2>{{ title }}</h2>
-<p>{{ intro }}</p>
-<div *ngFor="let item of todos">
-  <input type="checkbox" [(ngModel)]="item.isDone">{{item.action}} ({{item.isDone ? "Yapıldı":"Yapılmadı"}})
-  <span class=""></span>
-  <hr>
+<div class="container">
+  <app-header-menu></app-header-menu>
+  <div class="row">
+    <div class="col-6">
+      <input type="text" name="" id="" class="form-control" #newAction>
+      <button class="btn btn-outline-warning" (click)="addNewItem(newAction.value)">Yeni eleman ekle</button>
+    </div>
+  </div>
+
+  <h2>{{ title }}</h2>
+  <p>{{ intro }}</p>
+  <button class="btn btn-success" (click)="fllter()">{{ getFilterButtonText() }} </button>
+  <div *ngFor="let item of todos">
+    <input type="checkbox" [(ngModel)]="item.isDone">{{item.action}} ({{item.isDone ? "Yapıldı":"Yapılmadı"}})
+    <span [ngClass]="item.isDone ? 'bg-primary':'bg-danger'" class="badge rounded-pill float-end">
+      {{item.isDone ? "Yapıldı":"Yapılmadı"}}
+    </span>
+    <hr>
+  </div>
 </div>
