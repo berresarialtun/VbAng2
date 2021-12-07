@@ -1,4 +1,6 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs';
 import { Category } from '../models/category.model';
 import { Categories } from '../models/mocks/category.mock';
 
@@ -9,11 +11,15 @@ import { Categories } from '../models/mocks/category.mock';
 })
 export class CategoryMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
   
-  categories: Category[] = Categories;
+  categories: Category[];
 
   ngOnInit(): void {
+     this.httpClient.get<Category[]>('https://localhost:44341/api/Categories')
+                    .pipe(tap(x=>console.log(x)))
+                    .subscribe((data:Category[])=> this.categories = data);
+                    
   }
 
 }

@@ -10,6 +10,7 @@ import { CourseComponent } from './course/course.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
 import { CourseSearchPipe } from './pipes/course-search.pipe';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-
-  ],
+    FormsModule,
+    HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
