@@ -1,5 +1,22 @@
-<div class="row"  >
-   <div class="col-4" *ngFor="let course of courseList">
-     <app-course [current]="course" ></app-course>
-   </div>    
+<div class="container" *ngIf="courseList; else noCourse">
+  <div class="row m-4">
+    <div class="col-12">
+      <input type="text" placeholder="aranacak kelime" name="" id="" #word [(ngModel)]="searchWord"
+        class="form-control">
+      <p class="text-danger m-3">
+        Aranan kelime: {{searchWord}}
+      </p>
+    </div>
+  </div>
+  <div class="row m-2">
+    <div class="col-4" *ngFor="let course of courseList | courseSearch : searchWord ">
+      <app-course [current]="course"></app-course>
+    </div>
+  </div>
 </div>
+
+<ng-template #noCourse>
+  <div class="alert alert-danger">
+    Eğitim bulunamadı....
+  </div>
+</ng-template>

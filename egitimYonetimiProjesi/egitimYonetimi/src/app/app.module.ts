@@ -8,6 +8,8 @@ import { CategoryMenuComponent } from './category-menu/category-menu.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseComponent } from './course/course.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
+import { CourseSearchPipe } from './pipes/course-search.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,14 @@ import { CommentListComponent } from './comment-list/comment-list.component';
     CategoryMenuComponent,
     CourseListComponent,
     CourseComponent,
-    CommentListComponent
+    CommentListComponent,
+    CourseSearchPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,7 +11,9 @@ export class CourseListComponent implements OnInit {
 
   constructor() { }
 
-  courseList: Course[] = CourseList;
+  searchWord:string;
+
+  courseList: Course[]=CourseList;
 
   ngOnInit(): void {
   }
