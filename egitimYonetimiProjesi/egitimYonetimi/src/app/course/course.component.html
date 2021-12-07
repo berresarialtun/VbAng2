@@ -1,8 +1,8 @@
 <div class="card">
     <img src="{{course.imageUrl}}" class="card-img-top" alt="{{course.name}}">
     <div class="card-body">
-        <h5 class="card-title">{{course.name}}</h5>
-        <p class="card-text">{{course.instructor}}</p>
+        <h6 class="card-title">{{course.name | uppercase}}</h6>
+        <p class="card-text">{{course.instructor | titlecase}}</p>
         <p class="card-text">{{course.rating}}</p>
 
     </div> 
