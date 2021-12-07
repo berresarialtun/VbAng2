@@ -1,20 +1,5 @@
 <div class="row"  >
-   <div class="col-4" *ngFor="let course of courseList" >
-    <div class="card">
-        <img src="{{course.imageUrl}}" class="card-img-top" alt="{{course.name}}">
-        <div class="card-body">
-          <h5 class="card-title">{{course.name}}</h5>
-          <p class="card-text">{{course.instructor}}</p>
-          <p class="card-text">{{course.rating}}</p>
-
-        </div>
-        <ul class="list-group list-group-flush" *ngFor="let comment of course.comments">
-          <li class="list-group-item">{{comment.comment}}</li>        
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
-   </div>
+   <div class="col-4" *ngFor="let course of courseList">
+     <app-course [current]="course" ></app-course>
+   </div>    
 </div>

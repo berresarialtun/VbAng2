@@ -1,1 +1,3 @@
-<p>comment-list works!</p>
+<ul class="list-group list-group-flush" *ngFor="let comment of course.comments">
+    <li class="list-group-item">{{comment.comment}}</li>
+</ul>

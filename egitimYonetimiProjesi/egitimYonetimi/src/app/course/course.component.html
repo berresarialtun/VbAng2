@@ -1,1 +1,14 @@
-<p>course works!</p>
+<div class="card">
+    <img src="{{course.imageUrl}}" class="card-img-top" alt="{{course.name}}">
+    <div class="card-body">
+        <h5 class="card-title">{{course.name}}</h5>
+        <p class="card-text">{{course.instructor}}</p>
+        <p class="card-text">{{course.rating}}</p>
+
+    </div> 
+    <app-comment-list [course]="course"></app-comment-list>
+    <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
+</div>
