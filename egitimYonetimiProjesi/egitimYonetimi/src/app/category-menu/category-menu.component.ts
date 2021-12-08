@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
 import { Category } from '../models/category.model';
 import { Categories } from '../models/mocks/category.mock';
+import { CategoryService } from '../services/category.service';
 
 @Component({
   selector: 'app-category-menu',
@@ -11,15 +12,14 @@ import { Categories } from '../models/mocks/category.mock';
 })
 export class CategoryMenuComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient) { }
-  
+  constructor(private categoryService: CategoryService) { }
+
   categories: Category[];
 
   ngOnInit(): void {
-     this.httpClient.get<Category[]>('https://localhost:44341/api/Categories')
-                    .pipe(tap(x=>console.log(x)))
-                    .subscribe((data:Category[])=> this.categories = data);
-                    
+    this.categoryService.getAllCategories()
+      .subscribe((incomingData: Category[]) => this.categories = incomingData);
+
   }
 
 }
