@@ -22,5 +22,11 @@ namespace Egitim.API.Controllers
         {
             return Ok(courseService.GetCourses());
         }
+        [HttpGet("category/{id}")]
+        public IActionResult GetCoursesByCategegoryId(int id)
+        {
+            var courses = courseService.GetCourses().Where(x => x.CategoryId == id);
+            return Ok(courses);
+        }
     }
 }

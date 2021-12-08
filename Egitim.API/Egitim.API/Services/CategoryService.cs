@@ -17,6 +17,8 @@ namespace Egitim.API.Services
                 new Category { Id=2, Name="PMP Eğitimi"},
                 new Category { Id=3, Name="ITIL Eğitimi"},
                 new Category { Id=4, Name="Devops Engineering Eğitimi"},
+                new Category { Id=5, Name="Kişisel Gelişim"},
+
             };
         }
 

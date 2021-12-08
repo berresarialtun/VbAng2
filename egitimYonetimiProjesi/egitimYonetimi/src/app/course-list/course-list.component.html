@@ -1,4 +1,4 @@
-<div class="container" *ngIf="courseList; else noCourse">
+<div class="container" *ngIf="courseList.length >0; else noCourse">
   <div class="row m-4">
     <div class="col-12">
       <input type="text" placeholder="aranacak kelime" name="" id="" #word [(ngModel)]="searchWord"

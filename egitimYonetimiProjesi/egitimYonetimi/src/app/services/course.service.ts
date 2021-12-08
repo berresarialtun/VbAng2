@@ -14,5 +14,8 @@ export class CourseService {
   getCourses(): Observable<Course[]> {
     return this.httpClient.get<Course[]>(this.url);
   }
+  getCoursesByCategoryId(id:number):Observable<Course[]>{
+    return this.httpClient.get<Course[]>(this.url+"/category/"+id);
+  }
 
 }

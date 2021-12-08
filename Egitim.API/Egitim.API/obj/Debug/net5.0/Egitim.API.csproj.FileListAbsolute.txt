@@ -22,7 +22,6 @@ C:\Users\turka\source\repos\Kurumsal\Vakıfbank\Angular Part II\Egitim.API\Egiti
 C:\Users\turka\source\repos\Kurumsal\Vakıfbank\Angular Part II\Egitim.API\Egitim.API\obj\Debug\net5.0\staticwebassets\Egitim.API.StaticWebAssets.xml
 C:\Users\turka\source\repos\Kurumsal\Vakıfbank\Angular Part II\Egitim.API\Egitim.API\obj\Debug\net5.0\scopedcss\bundle\Egitim.API.styles.css
 C:\Users\turka\source\repos\Kurumsal\Vakıfbank\Angular Part II\Egitim.API\Egitim.API\obj\Debug\net5.0\Egitim.API.RazorTargetAssemblyInfo.cache
-C:\Users\turka\source\repos\Kurumsal\Vakıfbank\Angular Part II\Egitim.API\Egitim.API\obj\Debug\net5.0\Egitim.API.csproj.CopyComplete
 C:\Users\turka\source\repos\Kurumsal\Vakıfbank\Angular Part II\Egitim.API\Egitim.API\obj\Debug\net5.0\Egitim.API.dll
 C:\Users\turka\source\repos\Kurumsal\Vakıfbank\Angular Part II\Egitim.API\Egitim.API\obj\Debug\net5.0\ref\Egitim.API.dll
 C:\Users\turka\source\repos\Kurumsal\Vakıfbank\Angular Part II\Egitim.API\Egitim.API\obj\Debug\net5.0\Egitim.API.pdb
