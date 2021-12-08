@@ -13,6 +13,13 @@ namespace Egitim.API.Services
         {
             return courses;
         }
+
+        public Course AddCourse(Course course)
+        {
+            course.Id = courses[courses.Count - 1].Id + 1;
+            this.courses.Add(course);
+            return course;
+        }
         private List<Course> courses;
         public CourseService()
         {

@@ -22,7 +22,10 @@ export class AddCategoryComponent implements OnInit {
     console.log('eklenecek kategori', this.category);
     if (form.valid) {
       this.categoryService.addNewCategory(this.category)
-          .subscribe((gelen: Category) => {alert(gelen.name + " başarıyla eklendi"); location=location});
+        .subscribe((gelen: Category) => {
+          alert(gelen.name + " başarıyla eklendi");
+          location = location
+        });
     }
 
 

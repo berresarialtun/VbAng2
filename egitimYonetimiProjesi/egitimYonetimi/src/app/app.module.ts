@@ -9,7 +9,7 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { CourseComponent } from './course/course.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
 import { CourseSearchPipe } from './pipes/course-search.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { AddCourseComponent } from './add-course/add-course.component';
@@ -30,7 +30,8 @@ import { AddCourseComponent } from './add-course/add-course.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

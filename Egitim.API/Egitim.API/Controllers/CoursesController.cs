@@ -1,4 +1,5 @@
-﻿using Egitim.API.Services;
+﻿using Egitim.API.Models;
+using Egitim.API.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -27,6 +28,12 @@ namespace Egitim.API.Controllers
         {
             var courses = courseService.GetCourses().Where(x => x.CategoryId == id);
             return Ok(courses);
+        }
+
+        public IActionResult AddCourse(Course course)
+        {
+            var added = courseService.AddCourse(course);
+            return Created("eklendi.com", added);
         }
     }
 }

@@ -17,5 +17,8 @@ export class CourseService {
   getCoursesByCategoryId(id:number):Observable<Course[]>{
     return this.httpClient.get<Course[]>(this.url+"/category/"+id);
   }
+  addCourse(course:Course):Observable<Course>{
+    return this.httpClient.post(this.url,course);
+  }
 
 }

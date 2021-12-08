@@ -9,9 +9,12 @@
     </div>
   </div>
   <div class="row m-2">
-    <div class="col-4" *ngFor="let course of courseList | courseSearch : searchWord ">
+    <div class="col-4" *ngFor="let course of paginatedCourse | courseSearch : searchWord ">
       <app-course [current]="course"></app-course>
     </div>
+  </div>
+  <div>
+    <button class="btn btn-outline-primary" *ngFor="let page of pageNumbers()" (click)="changePage(page)" >{{page}}</button>
   </div>
 </div>
 
