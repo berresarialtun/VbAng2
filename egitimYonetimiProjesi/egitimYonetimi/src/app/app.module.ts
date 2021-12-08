@@ -11,6 +11,8 @@ import { CommentListComponent } from './comment-list/comment-list.component';
 import { CourseSearchPipe } from './pipes/course-search.pipe';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AddCategoryComponent } from './add-category/add-category.component';
+import { AddCourseComponent } from './add-course/add-course.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     CourseListComponent,
     CourseComponent,
     CommentListComponent,
-    CourseSearchPipe
+    CourseSearchPipe,
+    AddCategoryComponent,
+    AddCourseComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Category } from '../models/category.model';
@@ -15,5 +15,15 @@ export class CategoryService {
   getAllCategories():Observable<Category[]>{
     return this.httpClient
                .get<Category[]>(this.url);
+  }
+
+  addNewCategory(category:Category):Observable<Category>{
+    let option = {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer [JWT TOKEN]'
+      })
+    }
+    return this.httpClient.post(this.url,category);
   }
 }

@@ -1,4 +1,5 @@
-﻿using Egitim.API.Services;
+﻿using Egitim.API.Models;
+using Egitim.API.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -21,6 +22,12 @@ namespace Egitim.API.Controllers
         [HttpGet]
         public IActionResult GetCategories() {
             return Ok(categoryService.GetCategories());
+        }
+        [HttpPost]
+        public IActionResult AddCategory(Category category)
+        {
+           var addedCategory = categoryService.AddCategory(category);
+            return Created("http://www.eklendi.com", addedCategory);
         }
     }
 }

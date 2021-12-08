@@ -26,6 +26,13 @@ namespace Egitim.API.Services
         {
             return categories;
         }
+
+        public Category AddCategory(Category category)
+        {
+            category.Id = categories[categories.Count - 1].Id + 1;
+            categories.Add(category);
+            return category;
+        }
     }
 
 

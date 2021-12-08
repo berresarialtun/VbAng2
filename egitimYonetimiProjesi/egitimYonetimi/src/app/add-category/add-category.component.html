@@ -1,0 +1,10 @@
+<form #addNewCategory="ngForm" (submit)="addCategory(addNewCategory)">
+    <div>
+        <label for="textCategoryName" class="form-label">Kategori Adı</label>
+        <input type="text" name="name" required #cat="ngModel" [(ngModel)]="category.name" id="textCategoryName"
+            class="form-control">
+        <span class="alert alert-danger m-4" *ngIf="cat.invalid && cat.dirty">Kategori adı boş olamaz</span>
+    </div>
+
+    <button class="btn btn-success">Ekle</button>
+</form>
