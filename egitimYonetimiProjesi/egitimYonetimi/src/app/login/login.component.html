@@ -1,0 +1,7 @@
+<form>
+    <div>
+        <input type="text" [(ngModel)]="userName" class="form-control" name="username" placeholder="Kullanıcı Adı" id="">
+        <input type="password" [(ngModel)]="password" class="form-control" name="password" placeholder="Şifre" id="">
+    </div>
+    <button class="btn btn-success" (click)="login()">Giriş Yap</button>
+</form>
